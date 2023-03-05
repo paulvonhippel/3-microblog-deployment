@@ -1,0 +1,8 @@
+#flask==1.1.2
+# The line above installs a particular version.
+# To run this, run:
+# pip install -r requirements.txt
+flask
+python-dotenv
+pymongo[srv]
+gunicorn
