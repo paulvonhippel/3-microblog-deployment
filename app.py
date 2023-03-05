@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request
 import datetime
 from pymongo import MongoClient
-import certifi
 
 def create_app(): # This is called an app factory!
     app = Flask(__name__)
 
-    client = MongoClient("mongodb+srv://paulvonhippel:Uag1r!aw@cluster0.fnivnmh.mongodb.net/test", tlsCAFile=certifi.where())
+    client = MongoClient("mongodb+srv://paulvonhippel:Uag1r!aw@cluster0.fnivnmh.mongodb.net/test")
     app.db = client.microblog
     entries = []
 
